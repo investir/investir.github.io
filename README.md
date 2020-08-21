@@ -1,5 +1,7 @@
 # investir.github.io
 
+![build](https://github.com/investir/investir.github.io/workflows/build/badge.svg)
+
 Trabalho de visualização de dados. 2020/1
 
 - **Alunos**: Rodrigo Brito / Thiago Nicolini
