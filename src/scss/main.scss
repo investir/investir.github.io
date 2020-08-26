@@ -1,0 +1,12 @@
+@import "bulma/css/bulma.min.css";
+@import "bulma-extensions/bulma-timeline/dist/css/bulma-timeline.min.css";
+@import "font-awesome/css/font-awesome.min.css";
+
+// colors
+$gray-1: #f5f5f5;
+
+html,
+body {
+  height: 100%;
+  background-color: $gray-1;
+}
