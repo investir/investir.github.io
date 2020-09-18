@@ -15,7 +15,8 @@ jobs:
           node-version: 12.x
       - run: npm install
       - run: npm run build
-      - run: mv data dist/data
+      - run: rm -rf dist/data # Remove symbolic link
+      - run: mv data dist/
 
       - name: deploy
         if: success()
