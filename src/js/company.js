@@ -1,4 +1,5 @@
 import Plotly from "plotly.js-dist";
+import { createChart, CrosshairMode } from "lightweight-charts";
 import "../scss/main.scss";
 
 function unpack(rows, key) {
@@ -7,67 +8,155 @@ function unpack(rows, key) {
   });
 }
 
-const loadPrinceChart = (data) => {
-  Plotly.d3.csv(
-    "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv",
-    function (err, rows) {
-      var trace = {
-        x: unpack(rows, "Date"),
-        close: unpack(rows, "AAPL.Close"),
-        high: unpack(rows, "AAPL.High"),
-        low: unpack(rows, "AAPL.Low"),
-        open: unpack(rows, "AAPL.Open"),
+const colors = {
+  red: "#e23f4d",
+  green: "#49854c",
+};
 
-        // cutomise colors
-        increasing: { line: { color: "black" } },
-        decreasing: { line: { color: "red" } },
-
-        type: "candlestick",
-        xaxis: "x",
-        yaxis: "y",
-      };
-
-      var data = [trace];
-
-      var layout = {
-        dragmode: "zoom",
-        showlegend: false,
-        xaxis: {
-          autorange: true,
-          title: "Date",
-          rangeselector: {
-            x: 0,
-            y: 1.2,
-            xanchor: "left",
-            font: { size: 8 },
-            buttons: [
-              {
-                step: "month",
-                stepmode: "backward",
-                count: 1,
-                label: "1 month",
-              },
-              {
-                step: "month",
-                stepmode: "backward",
-                count: 6,
-                label: "6 months",
-              },
-              {
-                step: "all",
-                label: "All dates",
-              },
-            ],
-          },
-        },
-        yaxis: {
-          autorange: true,
-        },
-      };
-
-      Plotly.newPlot("priceChart", data, layout);
+/**
+ * returns an array with moving average of the input array
+ * @param array - the input array
+ * @param count - the number of elements to include in the moving average calculation
+ * @param qualifier - an optional function that will be called on each
+ *  value to determine whether it should be used
+ */
+function movingAvg(array, count) {
+  // calculate average for subarray
+  var avg = function (array) {
+    var sum = 0,
+      count = 0,
+      val;
+    for (var i in array) {
+      val = array[i];
+      sum += val;
+      count++;
     }
-  );
+
+    return sum / count;
+  };
+
+  var result = [],
+    val;
+
+  for (var i = 0, len = array.length - count; i <= len; i++) {
+    val = avg(array.slice(i, i + count).map((v) => v.close));
+    if (isNaN(val)) continue;
+    else result.push({ time: array[i].time, value: val });
+  }
+
+  return result;
+}
+
+const loadPrinceChart = (data) => {
+  const container = document.getElementById("priceChart");
+
+  const chartHeight = 500;
+
+  function getChartWidth() {
+    return container ? container.clientWidth : 0;
+  }
+
+  const chart = createChart(container, {
+    width: getChartWidth(),
+    height: chartHeight,
+    title: "Preço",
+    localization: {
+      priceFormatter: (price) => "R$" + price,
+    },
+    rightPriceScale: {
+      borderVisible: false,
+      scaleMargins: {
+        top: 0,
+        bottom: 0.2,
+        right: 0.1,
+      },
+    },
+    timeScale: {
+      borderVisible: false,
+      barSpacing: 1,
+    },
+    grid: {
+      horzLines: {
+        color: "#eeeeee",
+      },
+      vertLines: {
+        color: "#ffffff",
+      },
+    },
+    crosshair: {
+      mode: CrosshairMode.Normal,
+      horzLine: {
+        visible: true,
+        style: 2,
+        color: "rgba(0, 0, 0, 0.3)",
+        labelVisible: true,
+      },
+      vertLine: {
+        visible: true,
+        style: 2,
+        color: "rgba(0, 0, 0, 0.3)",
+        labelVisible: true,
+      },
+    },
+    localization: {
+      locale: "pt-BR",
+      dateFormat: "dd/MM/yyyy",
+    },
+  });
+
+  window.addEventListener("resize", () => {
+    chart.resize(getChartWidth(), chartHeight, true);
+  });
+
+  const series = chart.addCandlestickSeries({
+    upColor: colors.green,
+    borderUpColor: colors.green,
+    downColor: colors.red,
+    borderVisible: true,
+    wickVisible: true,
+    wickColor: "rgb(0, 0, 0)",
+    borderDownColor: colors.red,
+    wickUpColor: colors.green,
+    wickDownColor: colors.green,
+    title: "Cotação",
+  });
+
+  series.setData(data.price);
+
+  chart.timeScale().setVisibleLogicalRange({
+    from: data.price.length - 60,
+    to: data.price.length,
+  });
+
+  console.log(movingAvg(data.price, 7));
+  chart
+    .addLineSeries({
+      color: "blue",
+      lineWidth: 2,
+    })
+    .setData(movingAvg(data.price, 7));
+
+  const volumeSeries = chart.addHistogramSeries({
+    priceFormat: {
+      type: "volume",
+    },
+    title: "Vol",
+    priceScaleId: "",
+    scaleMargins: {
+      top: 0.8,
+      bottom: 0,
+    },
+  });
+
+  const volumeData = data.price.map(function (tick) {
+    let color = colors.red;
+    if (tick.close > tick.open) {
+      color = colors.green;
+    }
+    return { time: tick.time, value: tick.volume, color: color };
+  });
+
+  volumeSeries.setData(volumeData);
 };
 
 const loadProfitChart = (data) => {

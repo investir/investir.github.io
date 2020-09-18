@@ -17,6 +17,10 @@ npm run dev   - Start development enviroment
 npm run build - Production build
 ```
 
+## Colors
+
+Pallete: https://coolors.co/3298dc-f35f6b-4fa255
+
 ## License
 
 Released under [MIT](LICENSE) License
