@@ -11,7 +11,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
     />
-    <script src="js/company.js"></script>
     <title>Investir</title>
   </head>
   <body>
@@ -20,14 +19,26 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
-            <h1 class="title">Investir</h1>
+            <h1 class="title"><i class="fas fa-chart-line"></i> Investir</h1>
           </a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-menu">
-            <a class="navbar-item" href="/">Linha do Tempo</a>
-            <a class="navbar-item" href="/empresas.html">Empresas</a>
-          </a>
+          <div class="navbar-item">
+            <div class="dropdown">
+              <div class="dropdown-trigger">
+                <input
+                  id="search"
+                  class="input"
+                  type="text"
+                  placeholder="Pesquisar empresa..."
+                  aria-haspopup="true"
+                  aria-controls="prova-menu"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="dropdown-menu" id="prova-menu" role="menu" />
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -43,29 +54,33 @@
       </div>
     </section>
 
-    <div class="container mt-3">
+    <div class="container">
       <div class="box">
+        <h2 class="title">Cotação</h2>
         <div id="priceChart"></div>
 
-        <div class="tile is-ancestor">
-          <div class="tile is-6 is-vertical is-parent">
-            <div class="tile is-child box">
-              <p class="title">Gráfico 1</p>
-              <div id="profitChart1"></div>
-            </div>
-            <div class="tile is-child box">
-              <p class="title">Gráfico 2</p>
-              <div id="profitChart2"></div>
-            </div>
+        <div class="tile is-parent">
+          <div class="tile is-child box">
+            <p class="title">Receita / Lucro Líquido</p>
+            <div id="net-income-chart"></div>
           </div>
+        </div>
+
+        <div class="tile is-ancestor">
           <div class="tile is-parent">
             <div class="tile is-child box">
-              <p class="title">Gráfico 3 / Prejuízo</p>
-              <div id="profitChart3"></div>
+              <h2 class="title">Ativo Circulante / Passivo Circulante</h2>
+              <div id="asset-liability-chart"></div>
+            </div>
+            <div class="tile is-child box">
+              <p class="title">Patrimônio Líquido</p>
+              <div id="net-asset-chart"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="https://cdn.rawgit.com/mattmezza/bulmahead/master/dist/bulmahead.bundle.js"></script>
+    <script src="js/company.js"></script>
   </body>
 </html>

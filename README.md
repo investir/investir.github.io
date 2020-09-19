@@ -19,7 +19,7 @@ npm run build - Production build
 
 ## Colors
 
-Pallete: https://coolors.co/3298dc-f35f6b-4fa255
+Pallete: https://coolors.co/3298dc-f35f6b-4fa255-787878
 
 ## License
 

@@ -1,60 +1,218 @@
 import Plotly from "plotly.js-dist";
 import { createChart, CrosshairMode } from "lightweight-charts";
 import "../scss/main.scss";
+import { movingAverage, unpack } from "./indicators";
+import { colors } from "./colors";
 
-function unpack(rows, key) {
-  return rows.map(function (row) {
-    return row[key];
-  });
-}
+window.onload = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  let tick = urlParams.get("papel");
 
-const colors = {
-  red: "#e23f4d",
-  green: "#49854c",
+  if (!tick) {
+    tick = "petr4"; // fallback for Petrobrás
+  }
+
+  tick = tick.toLowerCase().trim();
+
+  fetch(`/data/${tick}.json`)
+    .then((data) => {
+      if (data.ok) {
+        return data.json();
+      }
+    })
+    .then((data) => {
+      console.log(data);
+
+      loadCompanyInfo(tick, data);
+      loadPrinceChart(data);
+      loadNetIncome(data);
+      loadAssetLiability(data);
+      loadNetAssetChart(data);
+      loadSearch();
+    })
+    .catch((err) => {
+      alert("Falha ao carregar. Tente novamente mais tarde.");
+      console.error(err);
+    });
+};
+
+const loadSearch = () => {
+  fetch(`/data/companies.json`)
+    .then((data) => {
+      if (data.ok) {
+        return data.json();
+      }
+    })
+    .then((companies) => {
+      bulmahead(
+        "search",
+        "prova-menu",
+        (searchTerm) =>
+          new Promise(
+            (filter, rj) =>
+              filter(
+                companies
+                  .filter(
+                    (company) =>
+                      company.name
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase()) ||
+                      company.tick
+                        .toLowerCase()
+                        .includes(searchTerm.toLowerCase())
+                  )
+                  .map((company) => ({
+                    label: `${company.tick} - ${company.name}`,
+                    value: company.tick,
+                  }))
+              ),
+            150,
+            1
+          ),
+        (result) => {
+          console.log(result);
+          document.location.href = `/empresas.html?papel=${result.value}`;
+        }
+      );
+    })
+    .catch((err) => {
+      console.error("Search error", err);
+    });
 };
 
 /**
- * returns an array with moving average of the input array
- * @param array - the input array
- * @param count - the number of elements to include in the moving average calculation
- * @param qualifier - an optional function that will be called on each
- *  value to determine whether it should be used
+ * Load net income / revenue chart (barchart)
+ * @param {Object} data company data
  */
-function movingAvg(array, count) {
-  // calculate average for subarray
-  var avg = function (array) {
-    var sum = 0,
-      count = 0,
-      val;
-    for (var i in array) {
-      val = array[i];
-      sum += val;
-      count++;
-    }
-
-    return sum / count;
+const loadNetIncome = (data) => {
+  const netIncome = {
+    y: unpack(data.balance, "net_income"),
+    x: unpack(data.balance, "year"),
+    name: "Lucro Líquido",
+    type: "bar",
+    textposition: "auto",
   };
 
-  var result = [],
-    val;
+  const revenue = {
+    y: unpack(data.balance, "revenue"),
+    x: unpack(data.balance, "year"),
+    name: "Receita",
+    type: "bar",
+    textposition: "auto",
+  };
 
-  for (var i = 0, len = array.length - count; i <= len; i++) {
-    val = avg(array.slice(i, i + count).map((v) => v.close));
-    if (isNaN(val)) continue;
-    else result.push({ time: array[i].time, value: val });
+  Plotly.newPlot("net-income-chart", [revenue, netIncome], {
+    barmode: "group",
+    yaxis: {
+      title: "Total em Reais (R$)",
+    },
+    xaxis: {
+      type: "category",
+      title: "Ano",
+    },
+  });
+};
+
+/**
+ * Load net asset chart (barchart)
+ * @param {Object} data company data
+ */
+const loadNetAssetChart = (data) => {
+  const netAsset = {
+    y: unpack(data.balance, "net_income"),
+    x: unpack(data.balance, "year"),
+    name: "Patrimônio Líquido",
+    type: "bar",
+    textposition: "auto",
+  };
+
+  Plotly.newPlot("net-asset-chart", [netAsset], {
+    barmode: "group",
+    yaxis: {
+      title: "Total em Reais (R$)",
+    },
+    xaxis: {
+      type: "category",
+      title: "Ano",
+    },
+  });
+};
+
+/**
+ * Load assets / liability  chart (barchart)
+ * @param {Object} data company data
+ */
+const loadAssetLiability = (data) => {
+  const asset = {
+    y: unpack(data.balance, "asset"),
+    x: unpack(data.balance, "year"),
+    name: "Ativo Circulante",
+    type: "bar",
+    textposition: "auto",
+  };
+
+  const liability = {
+    y: unpack(data.balance, "liability"),
+    x: unpack(data.balance, "year"),
+    name: "Passivo Circulante",
+    type: "bar",
+    textposition: "auto",
+  };
+
+  const liquidity = {
+    y: data.balance.map((data) => data.asset / data.liability),
+    x: unpack(data.balance, "year"),
+    name: "Liquidez Corrente",
+    type: "scatter",
+    yaxis: "y2",
+    textposition: "auto",
+  };
+
+  Plotly.newPlot("asset-liability-chart", [asset, liability, liquidity], {
+    barmode: "group",
+    yaxis: {
+      title: "Total em Reais (R$)",
+    },
+    xaxis: {
+      type: "category",
+      title: "Ano",
+    },
+    yaxis2: {
+      title: "Liquidez",
+      overlaying: "y",
+      side: "right",
+    },
+  });
+};
+
+/**
+ * Load company information
+ * @param {String} tick company's tick
+ * @param {Object} data company data
+ */
+const loadCompanyInfo = (tick, data) => {
+  document.querySelector(".tick").textContent = tick.toUpperCase();
+  document.querySelector(".description").textContent = data.name;
+
+  if (data.logo) {
+    const logo = document.querySelector(".logo");
+    logo.classList.remove("is-hidden");
+    logo.setAttribute("src", data.logo);
   }
+};
 
-  return result;
-}
-
+/**
+ * Load price chart (candlesticks)
+ * @param {Object} data company data
+ */
 const loadPrinceChart = (data) => {
   const container = document.getElementById("priceChart");
 
   const chartHeight = 500;
 
-  function getChartWidth() {
+  const getChartWidth = () => {
     return container ? container.clientWidth : 0;
-  }
+  };
 
   const chart = createChart(container, {
     width: getChartWidth(),
@@ -128,19 +286,19 @@ const loadPrinceChart = (data) => {
     to: data.price.length,
   });
 
-  console.log(movingAvg(data.price, 7));
   chart
     .addLineSeries({
-      color: "blue",
+      title: "Média Móvel",
+      color: colors.gray,
       lineWidth: 2,
     })
-    .setData(movingAvg(data.price, 7));
+    .setData(movingAverage(data.price, 7));
 
   const volumeSeries = chart.addHistogramSeries({
     priceFormat: {
       type: "volume",
     },
-    title: "Vol",
+    title: "Volume",
     priceScaleId: "",
     scaleMargins: {
       top: 0.8,
@@ -157,59 +315,4 @@ const loadPrinceChart = (data) => {
   });
 
   volumeSeries.setData(volumeData);
-};
-
-const loadProfitChart = (data) => {
-  var trace1 = {
-    x: [0, 1, 2, 3, 4, 5],
-    y: [1.5, 1, 1.3, 0.7, 0.8, 0.9],
-    type: "scatter",
-  };
-
-  var trace2 = {
-    x: [0, 1, 2, 3, 4, 5],
-    y: [1, 0.5, 0.7, -1.2, 0.3, 0.4],
-    type: "bar",
-  };
-
-  var data = [trace1, trace2];
-
-  // TODO: remove duplicate
-  Plotly.newPlot("profitChart1", data);
-  Plotly.newPlot("profitChart2", data);
-  Plotly.newPlot("profitChart3", data);
-};
-
-window.onload = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  let tick = urlParams.get("papel");
-
-  if (!tick) {
-    tick = "petr4";
-  }
-
-  tick = tick.toLowerCase().trim();
-
-  fetch(`/data/${tick}.json`)
-    .then((data) => {
-      return data.json();
-    })
-    .then((data) => {
-      console.log(data);
-      document.querySelector(".tick").textContent = tick.toUpperCase();
-      document.querySelector(".description").textContent = data.name;
-
-      if (data.logo) {
-        const logo = document.querySelector(".logo");
-        logo.classList.remove("is-hidden");
-        logo.setAttribute("src", data.logo);
-      }
-
-      loadPrinceChart(data);
-      loadProfitChart(data);
-    })
-    .catch((err) => {
-      alert("Falha ao carregar");
-      console.error(err);
-    });
 };
