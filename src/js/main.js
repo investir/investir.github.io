@@ -1,4 +1,3 @@
-import Plotly from "plotly.js-dist";
 import "../scss/main.scss";
 import { createCandlestickChart } from "./candlestick";
 
