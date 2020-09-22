@@ -87,7 +87,7 @@ export function createCandlestickChart(data, container, height) {
 
   chart
     .addLineSeries({
-      title: "Média Móvel",
+      title: "",
       color: colors.gray,
       lineWidth: 2,
     })

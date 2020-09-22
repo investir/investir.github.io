@@ -166,6 +166,10 @@ const loadAssetLiability = (data) => {
     name: "Liquidez Corrente",
     type: "scatter",
     yaxis: "y2",
+    line: {
+      color: "#303030",
+      width: 2,
+    },
     textposition: "auto",
   };
 
