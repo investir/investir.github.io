@@ -1,4 +1,5 @@
 import Plotly from "plotly.js-dist";
+import "../scss/main.scss";
 
 window.onload = () => {
 
@@ -9,7 +10,7 @@ window.onload = () => {
       }
     })
     .then((data) => {
-      //console.log(data);
+      loadTable(data);
       loadTreeChart(data);
     })
     .catch((err) => {
@@ -17,6 +18,25 @@ window.onload = () => {
       console.error(err);
     });
 };
+
+const loadTable = (data) => {
+  data.sort((a, b) => b.market_value - a.market_value)
+  const tbody = document.querySelector('.tbl-comapanies-body');
+  data.forEach(item => {
+    const tr = document.createElement('tr');
+    const value = item.market_value;
+    tr.innerHTML = `
+      <td><a href="/empresas.html?papel=${item.tick}">${item.tick}</a></td>
+      <td><a href="/empresas.html?papel=${item.tick}">${item.name}</a></td>
+      <td>${item.sector}</td>
+      <td>${item.subsector}</td>
+      <td class="has-text-right">R$ ${value.toLocaleString("pt-BR", {   
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+      })}</td>`;
+    tbody.appendChild(tr);
+  });
+}
 
 const loadTreeChart = (data) => {
   //Get distinct sector and set Ibovespa as parent
@@ -65,8 +85,6 @@ const loadTreeChart = (data) => {
     companyParent.push(key)
     companyValue.push(item.market_value/1000000000.0)
   }
-
-  debugger;
 
   const treemap = [{
     type: "treemap",
