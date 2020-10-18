@@ -66,15 +66,15 @@ export function createCandlestickChart(data, container, height) {
   });
 
   const series = chart.addCandlestickSeries({
-    upColor: colors.green,
-    borderUpColor: colors.green,
+    upColor: colors.blue,
+    borderUpColor: colors.blue,
     downColor: colors.red,
     borderVisible: true,
     wickVisible: true,
     wickColor: "rgb(0, 0, 0)",
     borderDownColor: colors.red,
-    wickUpColor: colors.green,
-    wickDownColor: colors.green,
+    wickUpColor: colors.blue,
+    wickDownColor: colors.blue,
     title: "Cotação",
   });
 
@@ -108,7 +108,7 @@ export function createCandlestickChart(data, container, height) {
   const volumeData = data.price.map(function (tick) {
     let color = colors.red;
     if (tick.close > tick.open) {
-      color = colors.green;
+      color = colors.blue;
     }
     return { time: tick.time, value: tick.volume, color: color };
   });

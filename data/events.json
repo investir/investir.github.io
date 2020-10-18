@@ -1,0 +1,104 @@
+[
+  {
+    "date": "2014-06-19",
+    "tick": "",
+    "title": "Protestos da copa de 2014",
+    "link": "http://g1.globo.com/politica/noticia/2014/06/com-mais-de-20-protestos-1-semana-de-copa-tem-180-detidos-em-atos.html"
+  },
+  {
+    "date": "2014-08-13",
+    "tick": "",
+    "title": "Eduardo Campos morre em Santos",
+    "link": "http://g1.globo.com/sp/santos-regiao/noticia/2014/08/eduardo-campos-morre-apos-queda-do-aviao-em-que-viajava.html"
+  },
+  {
+    "date": "2014-10-26",
+    "tick": "",
+    "title": "Releição Dilma",
+    "link": "http://g1.globo.com/politica/eleicoes/2014/noticia/2014/10/dilma-e-reeleita-presidente-e-amplia-para-16-anos-ciclo-do-pt-no-poder.html"
+  },
+  {
+    "date": "2015-11-05",
+    "tick": "VALE3",
+    "title": "Barragem de Mariana",
+    "link": "http://g1.globo.com/minas-gerais/noticia/2015/11/barragem-de-rejeitos-se-rompe-em-distrito-de-mariana.html"
+  },
+  {
+    "date": "2016-08-31",
+    "tick": "",
+    "title": "Impeachment Dilma",
+    "link": "http://g1.globo.com/politica/processo-de-impeachment-de-dilma/noticia/2016/08/senado-aprova-impeachment-dilma-perde-mandato-e-temer-assume.html"
+  },
+  {
+    "date": "2016-11-09",
+    "tick": "",
+    "title": "Donald Trump vence Hillary Clinton",
+    "link": "http://g1.globo.com/mundo/eleicoes-nos-eua/2016/noticia/2016/11/donald-trump-vence-hillary-clinton-e-e-eleito-presidente-dos-eua.html"
+  },
+  {
+    "date": "2017-05-18",
+    "tick": "JBSS3",
+    "title": "Joesley Day",
+    "link": "https://g1.globo.com/economia/mercados/noticia/bovespa-fecha-em-forte-queda-de-olho-em-denuncias-sobre-temer.ghtml"
+  },
+  {
+    "date": "2018-05-25",
+    "tick": "PETR4",
+    "title": "Greve dos Caminhoneiros",
+    "link": "https://g1.globo.com/economia/noticia/cronologia-greve-dos-caminhoneiros.ghtml"
+  },
+  {
+    "date": "2018-09-06",
+    "tick": "",
+    "title": "Facada em Jair Bolsonaro",
+    "link": "https://g1.globo.com/mg/zona-da-mata/noticia/2018/09/06/ato-de-campanha-de-bolsonaro-em-juiz-de-fora-e-interrompido-apos-tumulto.ghtml"
+  },
+  {
+    "date": "2018-10-28",
+    "tick": "",
+    "title": "Eleição Bolsonaro",
+    "link": "https://g1.globo.com/politica/eleicoes/2018/noticia/2018/10/28/jair-bolsonaro-e-eleito-presidente-e-interrompe-serie-de-vitorias-do-pt.ghtml"
+  },
+  {
+    "date": "2019-01-25",
+    "tick": "VALE3",
+    "title": "Barragem Brumadinho",
+    "link": "https://g1.globo.com/mg/minas-gerais/noticia/2019/01/25/bombeiros-e-defesa-civil-sao-mobilizados-para-chamada-de-rompimento-de-barragem-em-brumadinho-na-grande-bh.ghtml"
+  },
+  {
+    "date": "2019-02-06",
+    "tick": "",
+    "title": "Lula Condenado",
+    "link": "https://g1.globo.com/pr/parana/noticia/2019/02/06/lula-e-condenado-em-acao-da-lava-jato-sobre-sitio-de-atibaia.ghtml"
+  },
+  {
+    "date": "2019-08-16",
+    "tick": "",
+    "title": "Guerra comercial China e EUA",
+    "link": "https://g1.globo.com/economia/noticia/2019/08/16/guerra-comercial-entenda-a-piora-das-tensoes-entre-china-e-eua-e-as-incertezas-para-a-economia-mundial.ghtml"
+  },
+  {
+    "date": "2019-10-01",
+    "tick": "",
+    "title": "Reforma da Previdência",
+    "link": "https://g1.globo.com/politica/noticia/2019/10/01/reforma-da-previdencia-senado-aprova-texto-base-em-1o-turno-por-56-votos-a-19.ghtml"
+  },
+  {
+    "date": "2019-11-08",
+    "tick": "",
+    "title": "Lula deixa prisão",
+    "link": "https://g1.globo.com/jornal-nacional/noticia/2019/11/08/lula-deixa-pf-apos-decisao-do-stf-sobre-prisao-em-2a-instancia.ghtml"
+  },
+  {
+    "date": "2020-03-11",
+    "tick": "",
+    "title": "Pandemia COVID-19",
+    "link": "https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria/2020/03/oms-classifica-coronavirus-como-pandemia"
+  },
+  {
+    "date": "2020-04-24",
+    "tick": "",
+    "title": "Renúncia de Moro",
+    "link": "https://g1.globo.com/politica/noticia/2020/04/24/moro-anuncia-demissao-do-ministerio-da-justica-e-deixa-o-governo-bolsonaro.ghtml"
+  }
+]

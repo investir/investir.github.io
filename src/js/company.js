@@ -111,6 +111,10 @@ const loadNetIncome = (data) => {
       type: "category",
       title: "Ano",
     },
+    legend: {
+      y: 10,
+      xanchor: 'right',
+    }
   });
 };
 
@@ -187,6 +191,10 @@ const loadAssetLiability = (data) => {
       overlaying: "y",
       side: "right",
     },
+    legend: {
+      y: 10,
+      xanchor: 'right',
+    }
   });
 };
 

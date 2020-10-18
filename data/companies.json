@@ -42,13 +42,6 @@
     "market_value": 320767622570.7343
   },
   {
-    "tick": "PETR3",
-    "name": "Petrobras",
-    "sector": "Petróleo. Gás e Biocombustíveis",
-    "subsector": "Petróleo, Gás e Biocombustíveis",
-    "market_value": 288053643702.5782
-  },
-  {
     "tick": "B3SA3",
     "name": "B3",
     "sector": "Financeiro",
@@ -57,7 +50,7 @@
   },
   {
     "tick": "COGN3",
-    "name": "COGNA EDUCAÇÃO S.A.",
+    "name": "Cogna",
     "sector": "Consumo Cíclico",
     "subsector": "Diversos",
     "market_value": 13886886132.967113
@@ -84,22 +77,15 @@
     "market_value": 95418384579.8603
   },
   {
-    "tick": "BBDC3",
-    "name": "Bradesco",
-    "sector": "Financeiro",
-    "subsector": "Intermediários Financeiros",
-    "market_value": 185121337347.305
-  },
-  {
     "tick": "IRBR3",
-    "name": "IRB - BRASIL RESSEGUROS S.A.",
+    "name": "IRB",
     "sector": "Financeiro",
     "subsector": "Previdência e Seguros",
     "market_value": 7113599918.336084
   },
   {
     "tick": "CIEL3",
-    "name": "CIELO S.A.",
+    "name": "Cielo",
     "sector": "Financeiro",
     "subsector": "Serviços Financeiros Diversos",
     "market_value": 13937261573.84481
@@ -148,7 +134,7 @@
   },
   {
     "tick": "BRML3",
-    "name": "BR MALLS PARTICIPACOES S.A.",
+    "name": "BR Malls",
     "sector": "Financeiro",
     "subsector": "Exploração de Imóveis",
     "market_value": 8251185430.311507
@@ -183,7 +169,7 @@
   },
   {
     "tick": "EMBR3",
-    "name": "EMBRAER S.A.",
+    "name": "EMBRAER",
     "sector": "Bens Industriais",
     "subsector": "Material de Transporte",
     "market_value": 5531273723.324251
@@ -225,7 +211,7 @@
   },
   {
     "tick": "GOAU4",
-    "name": "METALURGICA GERDAU S.A.",
+    "name": "Gerdau",
     "sector": "Materiais Básicos",
     "subsector": "Siderurgia e Metalurgia",
     "market_value": 8511091604.619926
@@ -260,7 +246,7 @@
   },
   {
     "tick": "USIM5",
-    "name": "USINAS SID DE MINAS GERAIS S.A.-USIMINAS",
+    "name": "USIMINAS",
     "sector": "Materiais Básicos",
     "subsector": "Siderurgia e Metalurgia",
     "market_value": 15729578713.642498
@@ -274,7 +260,7 @@
   },
   {
     "tick": "MRFG3",
-    "name": "MARFRIG GLOBAL FOODS S.A.",
+    "name": "Marfrig",
     "sector": "Consumo não Cíclico",
     "subsector": "Alimentos Processados",
     "market_value": 10065883997.583914
@@ -295,14 +281,14 @@
   },
   {
     "tick": "TOTS3",
-    "name": "TOTVS S.A.",
+    "name": "TOTVS",
     "sector": "Tecnologia da Informação",
     "subsector": "Programas e Serviços",
     "market_value": 14991068223.778936
   },
   {
     "tick": "CRFB3",
-    "name": "Carrefour Atacadão",
+    "name": "Carrefour",
     "sector": "Consumo não Cíclico",
     "subsector": "Comércio e Distribuição",
     "market_value": 42876412237.22467
@@ -337,42 +323,42 @@
   },
   {
     "tick": "FLRY3",
-    "name": "FLEURY S.A.",
+    "name": "Fleury",
     "sector": "Saúde",
     "subsector": "Serv.Méd.Hospit..Análises e Diagnósticos",
     "market_value": 8268172401.845112
   },
   {
     "tick": "YDUQ3",
-    "name": "YDUQS PARTICIPACOES S.A.",
+    "name": "YDUQS",
     "sector": "Consumo Cíclico",
     "subsector": "Diversos",
     "market_value": 10113387582.025726
   },
   {
     "tick": "ENBR3",
-    "name": "EDP - ENERGIAS DO BRASIL S.A.",
+    "name": "Energias do Brasil",
     "sector": "Utilidade Pública",
     "subsector": "Energia Elétrica",
     "market_value": 10880827749.616043
   },
   {
     "tick": "MRVE3",
-    "name": "MRV ENGENHARIA E PARTICIPACOES S.A.",
+    "name": "MRV Engenharia",
     "sector": "Consumo Cíclico",
     "subsector": "Construção Civil",
     "market_value": 8954703332.329836
   },
   {
     "tick": "QUAL3",
-    "name": "QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.",
+    "name": "Qualicorp",
     "sector": "Saúde",
     "subsector": "Serv.Méd.Hospit..Análises e Diagnósticos",
     "market_value": 7929679975.668573
   },
   {
     "tick": "CYRE3",
-    "name": "CYRELA BRAZIL REALTY S.A.EMPREEND E PART",
+    "name": "Cyrela",
     "sector": "Consumo Cíclico",
     "subsector": "Construção Civil",
     "market_value": 10349340822.126358
@@ -386,7 +372,7 @@
   },
   {
     "tick": "MULT3",
-    "name": "MULTIPLAN - EMPREEND IMOBILIARIOS S.A.",
+    "name": "Multiplan",
     "sector": "Financeiro",
     "subsector": "Exploração de Imóveis",
     "market_value": 11473271998.997429
@@ -400,7 +386,7 @@
   },
   {
     "tick": "BEEF3",
-    "name": "MINERVA S.A.",
+    "name": "Minerva",
     "sector": "Consumo não Cíclico",
     "subsector": "Alimentos Processados",
     "market_value": 6420740941.70539
@@ -420,13 +406,6 @@
     "market_value": 19550021429.23449
   },
   {
-    "tick": "ELET6",
-    "name": "Eletrobras",
-    "sector": "Utilidade Pública",
-    "subsector": "Energia Elétrica",
-    "market_value": 69550870227.48276
-  },
-  {
     "tick": "BPAC11",
     "name": "Banco BTG Pactual",
     "sector": "Financeiro",
@@ -435,7 +414,7 @@
   },
   {
     "tick": "BRAP4",
-    "name": "BRADESPAR S.A.",
+    "name": "Bradespar",
     "sector": "Materiais Básicos",
     "subsector": "Mineração",
     "market_value": 14375632095.149467
@@ -470,7 +449,7 @@
   },
   {
     "tick": "ECOR3",
-    "name": "ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.",
+    "name": "Eco Rodovias",
     "sector": "Bens Industriais",
     "subsector": "Transporte",
     "market_value": 7765916998.873215
@@ -484,7 +463,7 @@
   },
   {
     "tick": "CVCB3",
-    "name": "CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.",
+    "name": "CVC Brasil",
     "sector": "Consumo Cíclico",
     "subsector": "Viagens e Lazer",
     "market_value": 3269916727.865774
@@ -512,14 +491,14 @@
   },
   {
     "tick": "HGTX3",
-    "name": "CIA HERING",
+    "name": "Hering",
     "sector": "Consumo Cíclico",
     "subsector": "Tecidos. Vestuário e Calçados",
     "market_value": 2278725871.142132
   },
   {
     "tick": "IGTA3",
-    "name": "IGUATEMI EMPRESA DE SHOPPING CENTERS S.A",
+    "name": "Shopping Iguatemi",
     "sector": "Financeiro",
     "subsector": "Exploração de Imóveis",
     "market_value": 5732811660.187271
