@@ -1,9 +1,9 @@
 import Plotly from "plotly.js-dist";
-import "../scss/main.scss";
 import { unpack } from "./indicators";
 import { colors } from "./colors";
 import { createCandlestickChart } from "./candlestick";
 import { initSearch } from "./search";
+import "../scss/main.scss";
 
 window.onload = () => {
   const urlParams = new URLSearchParams(window.location.search);

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Trabalho de visualização de dados - DCC/UFMG 2020.1",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": " node parcel.js",
     "build": "parcel build src/index.html src/empresas.html"
   },
   "repository": {
@@ -13,6 +13,7 @@
   "license": "MIT",
   "homepage": "https://investir.github.io",
   "devDependencies": {
+    "express": "^4.17.1",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10"
   },
