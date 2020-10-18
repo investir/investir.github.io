@@ -11,7 +11,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
     />
-    <!-- <script src="js/main.js"></script> -->
     <title>Investir</title>
   </head>
   <body>
@@ -24,11 +23,27 @@
           </a>
         </div>
         <div class="navbar-end">
-          <a class="navbar-menu">
-            <a class="navbar-item" href="/empresas.html"
-              ><i class="far fa-building"> </i>&nbsp;Empresas</a
-            >
-          </a>
+          <div class="navbar-item">
+            <div class="dropdown">
+              <div class="dropdown-trigger">
+                <div class="control has-icons-left has-icons-right">
+                  <input
+                    id="search"
+                    class="input"
+                    type="text"
+                    placeholder="Pesquisar empresa..."
+                    aria-haspopup="true"
+                    aria-controls="prova-menu"
+                    autocomplete="off"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="dropdown-menu" id="prova-menu" role="menu" />
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -39,21 +54,13 @@
         <div class="container">
           <!-- <img class="hero-img" src="img/undraw_financial_data_es63.svg" alt="Mercado Financeiro"> -->
           <h1 class="title">Bolsa de Valores</h1>
-          <h2 class="subtitle">Visualizações e Fatos Históricos</h2>
+          <h2 class="subtitle">Visualizações e Dados Fundamentalistas</h2>
         </div>
       </div>
     </section>
 
-    <!-- <div class="container">
-      <div class="box">
-        <h2 class="title">Ibovespa (BOVA11)</h2>
-        <div id="priceChart"></div>
-      </div>
-    </div> -->
-
     <div class="container">
       <div class="box">
-        <h2 class="title">Empresas por setor</h2>
         <div id="industries-chart"></div>
       </div>
 
@@ -125,6 +132,7 @@
         </div>
       </div>
     </div> -->
+    <!-- <script src="https://cdn.rawgit.com/mattmezza/bulmahead/master/dist/bulmahead.bundle.js"></script> -->
     <script src="js/industries.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script

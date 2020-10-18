@@ -26,15 +26,20 @@
           <div class="navbar-item">
             <div class="dropdown">
               <div class="dropdown-trigger">
-                <input
-                  id="search"
-                  class="input"
-                  type="text"
-                  placeholder="Pesquisar empresa..."
-                  aria-haspopup="true"
-                  aria-controls="prova-menu"
-                  autocomplete="off"
-                />
+                <div class="control has-icons-left has-icons-right">
+                  <input
+                    id="search"
+                    class="input"
+                    type="text"
+                    placeholder="Pesquisar empresa..."
+                    aria-haspopup="true"
+                    aria-controls="prova-menu"
+                    autocomplete="off"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
               </div>
               <div class="dropdown-menu" id="prova-menu" role="menu" />
             </div>
@@ -47,9 +52,20 @@
     <section class="hero is-info">
       <div class="hero-body">
         <div class="container">
-          <img class="logo is-hidden" src="" />
-          <h1 class="title tick">Bolsa de Valores</h1>
-          <h2 class="subtitle description">Visualizações e Fatos Históricos</h2>
+          <div class="media">
+            <div class="media-left">
+              <figure class="image">
+                <img class="logo is-hidden" src="" />
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content company">
+                <h1 class="title tick">Bolsa de Valores</h1>
+                <h2 class="subtitle description">Visualizações e Dados Fundamentalistas</h2>
+                <p class="sector"></p>
+              </div>
+            </div>
+          </div>          
         </div>
       </div>
     </section>
@@ -80,7 +96,7 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.rawgit.com/mattmezza/bulmahead/master/dist/bulmahead.bundle.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/mattmezza/bulmahead/master/dist/bulmahead.bundle.js"></script> -->
     <script src="js/company.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script

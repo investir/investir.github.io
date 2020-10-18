@@ -4,6 +4,7 @@ import "../scss/main.scss";
 import { movingAverage, unpack } from "./indicators";
 import { colors } from "./colors";
 import { createCandlestickChart } from "./candlestick";
+import { initSearch } from "./search";
 
 window.onload = () => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -44,38 +45,7 @@ const loadSearch = () => {
         return data.json();
       }
     })
-    .then((companies) => {
-      bulmahead(
-        "search",
-        "prova-menu",
-        (searchTerm) =>
-          new Promise(
-            (filter, rj) =>
-              filter(
-                companies
-                  .filter(
-                    (company) =>
-                      company.name
-                        .toLowerCase()
-                        .includes(searchTerm.toLowerCase()) ||
-                      company.tick
-                        .toLowerCase()
-                        .includes(searchTerm.toLowerCase())
-                  )
-                  .map((company) => ({
-                    label: `${company.tick} - ${company.name}`,
-                    value: company.tick,
-                  }))
-              ),
-            150,
-            1
-          ),
-        (result) => {
-          console.log(result);
-          document.location.href = `/empresas.html?papel=${result.value}`;
-        }
-      );
-    })
+    .then(initSearch)
     .catch((err) => {
       console.error("Search error", err);
     });
@@ -92,6 +62,9 @@ const loadNetIncome = (data) => {
     name: "Lucro Líquido",
     type: "bar",
     textposition: "auto",
+    marker: {
+      color: colors.orange
+    },
   };
 
   const revenue = {
@@ -100,6 +73,9 @@ const loadNetIncome = (data) => {
     name: "Receita",
     type: "bar",
     textposition: "auto",
+    marker: {
+      color: colors.blue
+    },
   };
 
   Plotly.newPlot("net-income-chart", [revenue, netIncome], {
@@ -129,6 +105,9 @@ const loadNetAssetChart = (data) => {
     name: "Patrimônio Líquido",
     type: "bar",
     textposition: "auto",
+    marker: {
+      color: colors.blue
+    },
   };
 
   Plotly.newPlot("net-asset-chart", [netAsset], {
@@ -153,6 +132,9 @@ const loadAssetLiability = (data) => {
     x: unpack(data.balance, "year"),
     name: "Ativo Circulante",
     type: "bar",
+    marker: {
+      color: colors.blue
+    },
     textposition: "auto",
   };
 
@@ -161,6 +143,9 @@ const loadAssetLiability = (data) => {
     x: unpack(data.balance, "year"),
     name: "Passivo Circulante",
     type: "bar",
+    marker: {
+      color: colors.orange
+    },
     textposition: "auto",
   };
 
@@ -171,7 +156,7 @@ const loadAssetLiability = (data) => {
     type: "scatter",
     yaxis: "y2",
     line: {
-      color: "#303030",
+      color: colors.dark,
       width: 2,
     },
     textposition: "auto",
@@ -206,6 +191,7 @@ const loadAssetLiability = (data) => {
 const loadCompanyInfo = (tick, data) => {
   document.querySelector(".tick").textContent = tick.toUpperCase();
   document.querySelector(".description").textContent = data.name;
+  document.querySelector(".sector").textContent = data.sector;
 
   if (data.logo) {
     const logo = document.querySelector(".logo");

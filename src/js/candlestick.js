@@ -88,7 +88,7 @@ export function createCandlestickChart(data, container, height) {
   chart
     .addLineSeries({
       title: "",
-      color: colors.gray,
+      color: colors.dark,
       lineWidth: 2,
     })
     .setData(movingAverage(data.price, 7));
@@ -106,11 +106,7 @@ export function createCandlestickChart(data, container, height) {
   });
 
   const volumeData = data.price.map(function (tick) {
-    let color = colors.red;
-    if (tick.close > tick.open) {
-      color = colors.blue;
-    }
-    return { time: tick.time, value: tick.volume, color: color };
+    return { time: tick.time, value: tick.volume, color: colors.gray };
   });
 
   volumeSeries.setData(volumeData);

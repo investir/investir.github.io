@@ -1,5 +1,7 @@
 import Plotly from "plotly.js-dist";
 import "../scss/main.scss";
+import { colors } from "./colors";
+import { initSearch } from "./search";
 
 window.onload = () => {
 
@@ -12,6 +14,7 @@ window.onload = () => {
     .then((data) => {
       loadTable(data);
       loadTreeChart(data);
+      initSearch(data);
     })
     .catch((err) => {
       alert("Falha ao carregar. Tente novamente mais tarde.");
@@ -97,12 +100,12 @@ const loadTreeChart = (data) => {
     branchvalues: "total",
     textfont: {
       size: 12,
+      color: "#ffffff"
     },
     tiling: {
       pad: 0
     }
-  }]
-
+  }];
 
   Plotly.newPlot('industries-chart', treemap, {
     height: 500,
@@ -112,6 +115,7 @@ const loadTreeChart = (data) => {
       b: 0,
       t: 0,
       pad: 0
-    }
+    },
+    colorway : colors.categorical,
   })
 }
