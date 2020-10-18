@@ -12,11 +12,19 @@ body {
 }
 
 .company {
-  .title {
-  }
-
   .subtitle {
     font-weight: normal;
     margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dropdown,
+  .dropdown-trigger {
+    width: 100%;
+  }
+
+  #search {
+    width: 100%;
   }
 }

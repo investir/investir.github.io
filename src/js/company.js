@@ -1,7 +1,6 @@
 import Plotly from "plotly.js-dist";
-import { createChart, CrosshairMode } from "lightweight-charts";
 import "../scss/main.scss";
-import { movingAverage, unpack } from "./indicators";
+import { unpack } from "./indicators";
 import { colors } from "./colors";
 import { createCandlestickChart } from "./candlestick";
 import { initSearch } from "./search";
