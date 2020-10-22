@@ -29,6 +29,7 @@ window.onload = () => {
       loadNetIncome(data);
       loadAssetLiability(data);
       loadNetAssetChart(data);
+      loadDebtChart(data)
       loadSearch();
     })
     .catch((err) => {
@@ -179,6 +180,30 @@ const loadAssetLiability = (data) => {
       y: 10,
       xanchor: 'right',
     }
+  });
+};
+
+const loadDebtChart = (data) => {
+  const debt = {
+    y: unpack(data.balance, "gross_debt"),
+    x: unpack(data.balance, "year"),
+    name: "Dívida Líquida",
+    type: "bar",
+    textposition: "auto",
+    marker: {
+      color: colors.red
+    },
+  };
+
+  Plotly.newPlot("debt-chart", [debt], {
+    barmode: "group",
+    yaxis: {
+      title: "Total em Reais (R$)",
+    },
+    xaxis: {
+      type: "category",
+      title: "Ano",
+    },
   });
 };
 

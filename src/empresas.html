@@ -72,26 +72,52 @@
 
     <!-- Charts -->
     <div class="container">
-      <div class="box">
-        <h2 class="title">Cotação</h2>
-        <div id="priceChart"></div>
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical">
 
-        <div class="tile is-parent">
-          <div class="tile is-child box">
-            <p class="title">Receita / Lucro Líquido</p>
-            <div id="net-income-chart"></div>
-          </div>
-        </div>
-
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div class="tile is-child box">
-              <h2 class="title">Ativo Circulante / Passivo Circulante</h2>
-              <div id="asset-liability-chart"></div>
+          <!-- Cotações -->
+          <div class="tile">
+            <div class="tile is-parent">
+              <div class="tile is-child box">
+                <h2 class="title">Cotação</h2>
+                <div id="priceChart"></div>
+              </div>
             </div>
-            <div class="tile is-child box">
-              <p class="title">Patrimônio Líquido</p>
-              <div id="net-asset-chart"></div>
+          </div>
+
+          <!-- Receita / Lucro Líquido -->
+          <div class="tile">
+            <div class="tile is-parent">
+              <div class="tile is-child box">
+                <p class="title">Receita / Lucro Líquido</p>
+                <div id="net-income-chart"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Patrimônio Líquido / Dívida Bruta -->
+          <div class="tile">
+            <div class="tile is-parent">
+              <div class="tile is-child box">
+                <p class="title">Patrimônio Líquido</p>
+                <div id="net-asset-chart"></div>
+              </div>
+            </div>
+            <div class="tile is-parent">
+              <div class="tile is-child box">
+                <h2 class="title">Dívida Bruta</h2>
+                <div id="debt-chart"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ativo Circulante / Passivo Circulante -->
+          <div class="tile">
+            <div class="tile is-parent">
+              <div class="tile is-child box">
+                <h2 class="title">Ativo Circulante / Passivo Circulante</h2>
+                <div id="asset-liability-chart"></div>
+              </div>
             </div>
           </div>
         </div>

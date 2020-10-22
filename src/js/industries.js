@@ -33,10 +33,14 @@ const loadTable = (data) => {
       <td><a href="/empresas.html?papel=${item.tick}">${item.name}</a></td>
       <td>${item.sector}</td>
       <td>${item.subsector}</td>
-      <td class="has-text-right">R$ ${value.toLocaleString("pt-BR", {   
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0,
-      })}</td>`;
+      <td class="has-text-right data-value" 
+          data-description="R$ ${value.toLocaleString("pt-BR", {   
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          })}"
+      >
+          <span>${value}</span>
+      </td>`;
     tbody.appendChild(tr);
   });
 }

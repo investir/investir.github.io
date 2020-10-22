@@ -61,21 +61,22 @@
 
     
     <div class="container">
-      <!-- Treempa -->
+      <!-- Treemap -->
       <div class="box">
         <div id="industries-chart"></div>
+        <h2 class="tree-map__title">Distribuição das empresas da Bovespa por setor</h2>
       </div>
 
       <!-- Table -->
       <div class="table-container">
-        <table class="table is-fullwidth">
+        <table class="table is-fullwidth js-sort-table">
           <thead>
             <tr>
               <th>Código</th>
               <th>Nome</th>
               <th>Setor</th>
               <th>Sub-setor</th>
-              <th class="has-text-right">Valor de Mercado</th>
+              <th class="has-text-right js-sort-number">Valor de Mercado</th>
             </tr>
           </thead>
           <tbody class="tbl-comapanies-body">
@@ -84,6 +85,7 @@
       </div>
     </div>
     <script src="js/industries.js"></script>
+    <script src="js/sort-table.js"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-35546390-10"
