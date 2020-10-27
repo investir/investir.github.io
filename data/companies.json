@@ -1,0 +1,506 @@
+[
+  {
+    "tick": "ITUB4",
+    "name": "Itaú Unibanco",
+    "sector": "Financeiro",
+    "subsector": "Intermediários Financeiros",
+    "market_value": 243934975860.2555
+  },
+  {
+    "tick": "PETR4",
+    "name": "Petrobras",
+    "sector": "Petróleo. Gás e Biocombustíveis",
+    "subsector": "Petróleo, Gás e Biocombustíveis",
+    "market_value": 288053643702.5782
+  },
+  {
+    "tick": "ITSA4",
+    "name": "Itaúsa",
+    "sector": "Financeiro",
+    "subsector": "Intermediários Financeiros",
+    "market_value": 90180278372.01575
+  },
+  {
+    "tick": "ABEV3",
+    "name": "AmBev",
+    "sector": "Consumo não Cíclico",
+    "subsector": "Bebidas",
+    "market_value": 210823346398.304
+  },
+  {
+    "tick": "BBDC4",
+    "name": "Bradesco",
+    "sector": "Financeiro",
+    "subsector": "Intermediários Financeiros",
+    "market_value": 185121337347.305
+  },
+  {
+    "tick": "VALE3",
+    "name": "Vale",
+    "sector": "Materiais Básicos",
+    "subsector": "Mineração",
+    "market_value": 320767622570.7343
+  },
+  {
+    "tick": "B3SA3",
+    "name": "B3",
+    "sector": "Financeiro",
+    "subsector": "Serviços Financeiros Diversos",
+    "market_value": 130178737851.39679
+  },
+  {
+    "tick": "COGN3",
+    "name": "Cogna",
+    "sector": "Consumo Cíclico",
+    "subsector": "Diversos",
+    "market_value": 13886886132.967113
+  },
+  {
+    "tick": "JBSS3",
+    "name": "JBS",
+    "sector": "Consumo não Cíclico",
+    "subsector": "Alimentos Processados",
+    "market_value": 59923290669.27713
+  },
+  {
+    "tick": "VVAR3",
+    "name": "Via Varejo",
+    "sector": "Consumo Cíclico",
+    "subsector": "Comércio",
+    "market_value": 31716757423.001785
+  },
+  {
+    "tick": "BBAS3",
+    "name": "Banco do Brasil",
+    "sector": "Financeiro",
+    "subsector": "Intermediários Financeiros",
+    "market_value": 95418384579.8603
+  },
+  {
+    "tick": "IRBR3",
+    "name": "IRB",
+    "sector": "Financeiro",
+    "subsector": "Previdência e Seguros",
+    "market_value": 7113599918.336084
+  },
+  {
+    "tick": "CIEL3",
+    "name": "Cielo",
+    "sector": "Financeiro",
+    "subsector": "Serviços Financeiros Diversos",
+    "market_value": 13937261573.84481
+  },
+  {
+    "tick": "CCRO3",
+    "name": "CCR",
+    "sector": "Bens Industriais",
+    "subsector": "Transporte",
+    "market_value": 28663799152.374268
+  },
+  {
+    "tick": "UGPA3",
+    "name": "Ultrapar",
+    "sector": "Petróleo. Gás e Biocombustíveis",
+    "subsector": "Petróleo, Gás e Biocombustíveis",
+    "market_value": 21016218561.207745
+  },
+  {
+    "tick": "RAIL3",
+    "name": "Rumo",
+    "sector": "Bens Industriais",
+    "subsector": "Transporte",
+    "market_value": 33627972444.086105
+  },
+  {
+    "tick": "GGBR4",
+    "name": "Gerdau",
+    "sector": "Materiais Básicos",
+    "subsector": "Siderurgia e Metalurgia",
+    "market_value": 28568202650.674984
+  },
+  {
+    "tick": "EQTL3",
+    "name": "Equatorial",
+    "sector": "Utilidade Pública",
+    "subsector": "Energia Elétrica",
+    "market_value": 25055094137.212887
+  },
+  {
+    "tick": "CMIG4",
+    "name": "Cemig",
+    "sector": "Utilidade Pública",
+    "subsector": "Energia Elétrica",
+    "market_value": 16236203382.507957
+  },
+  {
+    "tick": "BRML3",
+    "name": "BR Malls",
+    "sector": "Financeiro",
+    "subsector": "Exploração de Imóveis",
+    "market_value": 8251185430.311507
+  },
+  {
+    "tick": "LAME4",
+    "name": "Lojas Americanas",
+    "sector": "Consumo Cíclico",
+    "subsector": "Comércio",
+    "market_value": 61298364428.18917
+  },
+  {
+    "tick": "BRFS3",
+    "name": "BRF",
+    "sector": "Consumo não Cíclico",
+    "subsector": "Alimentos Processados",
+    "market_value": 16566328990.045685
+  },
+  {
+    "tick": "TIMP3",
+    "name": "Tim",
+    "sector": "Comunicações",
+    "subsector": "Telecomunicações",
+    "market_value": 36484958719.68952
+  },
+  {
+    "tick": "LREN3",
+    "name": "Lojas Renner",
+    "sector": "Consumo Cíclico",
+    "subsector": "Comércio",
+    "market_value": 31409875543.568
+  },
+  {
+    "tick": "EMBR3",
+    "name": "EMBRAER",
+    "sector": "Bens Industriais",
+    "subsector": "Material de Transporte",
+    "market_value": 5531273723.324251
+  },
+  {
+    "tick": "BRDT3",
+    "name": "Petrobras Distribuidora",
+    "sector": "Petróleo. Gás e Biocombustíveis",
+    "subsector": "Petróleo, Gás e Biocombustíveis",
+    "market_value": 24930999555.58777
+  },
+  {
+    "tick": "SUZB3",
+    "name": "Suzano",
+    "sector": "Materiais Básicos",
+    "subsector": "Madeira e Papel",
+    "market_value": 57281974107.26807
+  },
+  {
+    "tick": "NTCO3",
+    "name": "Natura \u0026 Co",
+    "sector": "Consumo não Cíclico",
+    "subsector": "Produtos de Uso Pessoal e de Limpeza",
+    "market_value": 58490095449.48105
+  },
+  {
+    "tick": "WEGE3",
+    "name": "WEG",
+    "sector": "Bens Industriais",
+    "subsector": "Máquinas e Equipamentos",
+    "market_value": 140169436464.5897
+  },
+  {
+    "tick": "BBSE3",
+    "name": "BB Seguridade",
+    "sector": "Financeiro",
+    "subsector": "Previdência e Seguros",
+    "market_value": 56200000762.93945
+  },
+  {
+    "tick": "GOAU4",
+    "name": "Gerdau",
+    "sector": "Materiais Básicos",
+    "subsector": "Siderurgia e Metalurgia",
+    "market_value": 8511091604.619926
+  },
+  {
+    "tick": "MGLU3",
+    "name": "Magazine Luiza",
+    "sector": "Consumo Cíclico",
+    "subsector": "Comércio",
+    "market_value": 134040366240
+  },
+  {
+    "tick": "CSNA3",
+    "name": "CSN",
+    "sector": "Materiais Básicos",
+    "subsector": "Siderurgia e Metalurgia",
+    "market_value": 17610261935.60315
+  },
+  {
+    "tick": "KLBN11",
+    "name": "Klabin",
+    "sector": "Materiais Básicos",
+    "subsector": "Madeira e Papel",
+    "market_value": 23292755303.93338
+  },
+  {
+    "tick": "RENT3",
+    "name": "Localiza",
+    "sector": "Consumo Cíclico",
+    "subsector": "Diversos",
+    "market_value": 37847487990.32829
+  },
+  {
+    "tick": "USIM5",
+    "name": "USIMINAS",
+    "sector": "Materiais Básicos",
+    "subsector": "Siderurgia e Metalurgia",
+    "market_value": 15729578713.642498
+  },
+  {
+    "tick": "GNDI3",
+    "name": "NotreDame Intermédica",
+    "sector": "Saúde",
+    "subsector": "Serv.Méd.Hospit..Análises e Diagnósticos",
+    "market_value": 39964486806.074615
+  },
+  {
+    "tick": "MRFG3",
+    "name": "Marfrig",
+    "sector": "Consumo não Cíclico",
+    "subsector": "Alimentos Processados",
+    "market_value": 10065883997.583914
+  },
+  {
+    "tick": "VIVT4",
+    "name": "Telefônica Brasil",
+    "sector": "Comunicações",
+    "subsector": "Telecomunicações",
+    "market_value": 85464995920.15839
+  },
+  {
+    "tick": "HYPE3",
+    "name": "Hypera",
+    "sector": "Saúde",
+    "subsector": "Comércio e Distribuição",
+    "market_value": 22950241095.64064
+  },
+  {
+    "tick": "TOTS3",
+    "name": "TOTVS",
+    "sector": "Tecnologia da Informação",
+    "subsector": "Programas e Serviços",
+    "market_value": 14991068223.778936
+  },
+  {
+    "tick": "CRFB3",
+    "name": "Carrefour",
+    "sector": "Consumo não Cíclico",
+    "subsector": "Comércio e Distribuição",
+    "market_value": 42876412237.22467
+  },
+  {
+    "tick": "SANB11",
+    "name": "Banco Santander",
+    "sector": "Financeiro",
+    "subsector": "Intermediários Financeiros",
+    "market_value": 107709887710.43109
+  },
+  {
+    "tick": "ELET3",
+    "name": "Eletrobras",
+    "sector": "Utilidade Pública",
+    "subsector": "Energia Elétrica",
+    "market_value": 69550870227.48276
+  },
+  {
+    "tick": "SBSP3",
+    "name": "Sabesp",
+    "sector": "Utilidade Pública",
+    "subsector": "água e Saneamento",
+    "market_value": 40238225257.96269
+  },
+  {
+    "tick": "AZUL4",
+    "name": "Azul",
+    "sector": "Bens Industriais",
+    "subsector": "Transporte",
+    "market_value": 6534723606.322472
+  },
+  {
+    "tick": "FLRY3",
+    "name": "Fleury",
+    "sector": "Saúde",
+    "subsector": "Serv.Méd.Hospit..Análises e Diagnósticos",
+    "market_value": 8268172401.845112
+  },
+  {
+    "tick": "YDUQ3",
+    "name": "YDUQS",
+    "sector": "Consumo Cíclico",
+    "subsector": "Diversos",
+    "market_value": 10113387582.025726
+  },
+  {
+    "tick": "ENBR3",
+    "name": "Energias do Brasil",
+    "sector": "Utilidade Pública",
+    "subsector": "Energia Elétrica",
+    "market_value": 10880827749.616043
+  },
+  {
+    "tick": "MRVE3",
+    "name": "MRV Engenharia",
+    "sector": "Consumo Cíclico",
+    "subsector": "Construção Civil",
+    "market_value": 8954703332.329836
+  },
+  {
+    "tick": "QUAL3",
+    "name": "Qualicorp",
+    "sector": "Saúde",
+    "subsector": "Serv.Méd.Hospit..Análises e Diagnósticos",
+    "market_value": 7929679975.668573
+  },
+  {
+    "tick": "CYRE3",
+    "name": "Cyrela",
+    "sector": "Consumo Cíclico",
+    "subsector": "Construção Civil",
+    "market_value": 10349340822.126358
+  },
+  {
+    "tick": "SULA11",
+    "name": "Sul América",
+    "sector": "Financeiro",
+    "subsector": "Previdência e Seguros",
+    "market_value": 21126319856.712246
+  },
+  {
+    "tick": "MULT3",
+    "name": "Multiplan",
+    "sector": "Financeiro",
+    "subsector": "Exploração de Imóveis",
+    "market_value": 11473271998.997429
+  },
+  {
+    "tick": "BRKM5",
+    "name": "Braskem",
+    "sector": "Materiais Básicos",
+    "subsector": "Químicos",
+    "market_value": 24479605330.08737
+  },
+  {
+    "tick": "BEEF3",
+    "name": "Minerva",
+    "sector": "Consumo não Cíclico",
+    "subsector": "Alimentos Processados",
+    "market_value": 6420740941.70539
+  },
+  {
+    "tick": "EGIE3",
+    "name": "Engie",
+    "sector": "Utilidade Pública",
+    "subsector": "Energia Elétrica",
+    "market_value": 37434765582.70485
+  },
+  {
+    "tick": "ENGI11",
+    "name": "Energisa",
+    "sector": "Utilidade Pública",
+    "subsector": "Energia Elétrica",
+    "market_value": 19550021429.23449
+  },
+  {
+    "tick": "BPAC11",
+    "name": "Banco BTG Pactual",
+    "sector": "Financeiro",
+    "subsector": "Intermediários Financeiros",
+    "market_value": 111330629066.93196
+  },
+  {
+    "tick": "BRAP4",
+    "name": "Bradespar",
+    "sector": "Materiais Básicos",
+    "subsector": "Mineração",
+    "market_value": 14375632095.149467
+  },
+  {
+    "tick": "TAEE11",
+    "name": "Taesa",
+    "sector": "Utilidade Pública",
+    "subsector": "Energia Elétrica",
+    "market_value": 9900888533.187313
+  },
+  {
+    "tick": "HAPV3",
+    "name": "Hapvida",
+    "sector": "Saúde",
+    "subsector": "Serv.Méd.Hospit..Análises e Diagnósticos",
+    "market_value": 47669978449.85565
+  },
+  {
+    "tick": "BTOW3",
+    "name": "B2W Digital",
+    "sector": "Consumo Cíclico",
+    "subsector": "Comércio",
+    "market_value": 64533523527.49821
+  },
+  {
+    "tick": "RADL3",
+    "name": "RaiaDrogasil",
+    "sector": "Saúde",
+    "subsector": "Comércio e Distribuição",
+    "market_value": 39121007469.90967
+  },
+  {
+    "tick": "ECOR3",
+    "name": "Eco Rodovias",
+    "sector": "Bens Industriais",
+    "subsector": "Transporte",
+    "market_value": 7765916998.873215
+  },
+  {
+    "tick": "CPFE3",
+    "name": "CPFL Energia",
+    "sector": "Utilidade Pública",
+    "subsector": "Energia Elétrica",
+    "market_value": 35224417879.15985
+  },
+  {
+    "tick": "CVCB3",
+    "name": "CVC Brasil",
+    "sector": "Consumo Cíclico",
+    "subsector": "Viagens e Lazer",
+    "market_value": 3269916727.865774
+  },
+  {
+    "tick": "PCAR3",
+    "name": "Pão de Açúcar",
+    "sector": "Consumo não Cíclico",
+    "subsector": "Comércio e Distribuição",
+    "market_value": 18307781394.822144
+  },
+  {
+    "tick": "CSAN3",
+    "name": "Cosan",
+    "sector": "Petróleo. Gás e Biocombustíveis",
+    "subsector": "Petróleo, Gás e Biocombustíveis",
+    "market_value": 33957249159.39331
+  },
+  {
+    "tick": "GOLL4",
+    "name": "Gol",
+    "sector": "Bens Industriais",
+    "subsector": "Transporte",
+    "market_value": 4833966416.473406
+  },
+  {
+    "tick": "HGTX3",
+    "name": "Hering",
+    "sector": "Consumo Cíclico",
+    "subsector": "Tecidos. Vestuário e Calçados",
+    "market_value": 2278725871.142132
+  },
+  {
+    "tick": "IGTA3",
+    "name": "Shopping Iguatemi",
+    "sector": "Financeiro",
+    "subsector": "Exploração de Imóveis",
+    "market_value": 5732811660.187271
+  }
+]
